@@ -3,3 +3,4 @@
 app_config.py
 downloads/*.txt
 downloads/*.zip
+.idea/*
