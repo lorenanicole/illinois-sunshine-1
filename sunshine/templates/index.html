@@ -113,7 +113,7 @@ Every Thursday, we recap the week’s political contributions, top earners, and 
     <a href='{{ url_for('views.top_earners') }}'>Top Earners</a> <small>last 30 days, updated daily</small>
 </h2>
 
-<p>Political committees operate by receiving donations, transfers and loans from people, organizations, and other committees. These are the political committees that have raised the most money since + calc_days_ago.strftime('%b %d, %Y'), request.path</p>
+<p>Political committees operate by receiving donations, transfers and loans from people, organizations, and other committees. These are the political committees that have raised the most money since {{ calc_days_ago.strftime('%b %d, %Y') }}. </p>
 <table class="table table-striped">
     <thead>
         <tr>

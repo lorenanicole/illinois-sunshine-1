@@ -124,13 +124,16 @@ def index():
                                              end_date=date))
         date = date - timedelta(days=1)
 
+    calc_days_ago = datetime.now() - timedelta(days=30)
+
     return render_template('index.html', 
                            top_earners=top_earners,
                            top_ten=top_ten,
                            totals=totals,
                            donations_by_month=donations_by_month,
                            donations_by_year=donations_by_year,
-                           days_donations=days_donations)
+                           days_donations=days_donations,
+                           calc_days_ago=calc_days_ago)
 
 @views.route('/donations/')
 @cache.cached(timeout=CACHE_TIMEOUT, key_prefix=make_cache_key)
